@@ -28,7 +28,7 @@ const flatten = function(treatsArray) {
       for (let j = 0; j < treatsArray[i][j]; j++) {
         singleArray.push(treatsArray[i][j]);
       }
-    } else if (!Array.isArray[i]) {
+    } else {
       singleArray.push(treatsArray[i]);
     }
     
@@ -38,3 +38,4 @@ const flatten = function(treatsArray) {
 
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
+
