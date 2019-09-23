@@ -1,24 +1,16 @@
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`🛑🛑🛑Assertion passed: ${actual} === ${expected}`);
-//   } else if (actual !== expected) {
-//     console.log(`Assertion failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 const eqArrays = function(x,y) {
   if (x.length !== y.length) {
-    console.log("Not same lenght");
+    console.log(x);
+    console.log(y);
+    console.log("Not same length");
     return false;
   }
   for (let i = 0; i < x.length; i++) {
     if (x[i] !== y[i]) {
       return false;
     }; 
-    
   }
-  return true;
-  
+  return true; 
 }
 
 module.exports = eqArrays;
@@ -29,4 +21,4 @@ module.exports = eqArrays;
 // assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
 
 
-eqArrays(["1", "2", "3"], ["1", "2", 3]);
+// eqArrays(["1", "2", "3"], ["1", "2", 3]);

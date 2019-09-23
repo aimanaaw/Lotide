@@ -1,0 +1,26 @@
+{
+  "name": "@aimanaaw/lotide",
+  "version": "1.0.0",
+  "description": "The functions in lotide",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimanaaw/Lotide.git"
+  },
+  "author": "Aiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aimanaaw/Lotide/issues"
+  },
+  "homepage": "https://github.com/aimanaaw/Lotide#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
