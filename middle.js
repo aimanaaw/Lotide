@@ -1,45 +1,29 @@
-const eqArrays = function(x,y) {
-  if (x.length !== y.length) {
-    console.log("Not same lenght");
-    return false;
-  }
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] !== y[i]) {
-      return false;
-    }; 
-  }
-  return true;
-}
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🛑🛑🛑Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion failed: ${actual} !== ${expected}`);
-  }
-}
-
 
 // Middle function
 const middle = function(array) {
   let middleArray = [];
   const lowerMiddleIndex = (array.length / 2) - 1;
-  const upperMiddleIndex = (array.length / 2) + 1;
-  if (array.length <=2) {
+  const upperMiddleIndex = (array.length / 2);
+  if (array.length <= 2) {
+    return [];
+  }
+  if (array.length % 2 === 0 && array.length > 2) {
+    let value1 = array[lowerMiddleIndex];
+    let value2 = array[upperMiddleIndex]
+    middleArray.push(value1);
+    middleArray.push(value2);
+    return middleArray;
+  } else {
+    let centreValue = array[(array.length - 1) / 2];
+    middleArray.push(centreValue);
     return middleArray;
   }
-  if (array.length % 2 === 0) {
-    middleArray = array.slice(lowerMiddleIndex, upperMiddleIndex);
-  } else {
-    middleArray = array[(array.length - 1) / 2];
-  }
-  return middleArray;
 }
 
-// console.log(middle([1, 2, 3, 4, 5, 6]));
+module.exports = middle;
+
 
 // Test case
+// assertArraysEqual(middle([1,2]), []);
 
-assertArraysEqual(middle([1,2]), []);
-
-assertArraysEqual(middle([1,2,3,4]), []);
+// assertArraysEqual(middle([1,2,3,4]), []);
